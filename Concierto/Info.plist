@@ -21,5 +21,16 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.1012564969751-39up3h05gk271sboeo7h0rdg4ajc4gpt</string>
+			</array>
+		</dict>
+	</array>
 </dict>
 </plist>

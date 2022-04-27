@@ -2,7 +2,7 @@
 //  SceneDelegate.swift
 //  Concierto
 //
-//  Created by Dani O'Connor on 4/25/22.
+//  Created by Danielle O'Connor on 4/25/22.
 //
 
 import UIKit

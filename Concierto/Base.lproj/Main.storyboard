@@ -1,24 +1,697 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gTM-kb-aqC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="w4H-yM-gz5"/>
+                    <connections>
+                        <segue destination="xTT-F7-Z0Q" kind="show" identifier="FirstShowSegue" animates="NO" id="Odk-Fd-4vM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="886.95652173913049" y="66.964285714285708"/>
+        </scene>
+        <!--States View Controller-->
+        <scene sceneID="Xs2-Dw-7mn">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="S3D-Gu-pYv" customClass="StatesViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tVC-XX-Kb9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Your State" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ogs-7Z-xrf">
+                                <rect key="frame" x="16" y="172.5" width="382" height="42.5"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="35"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Dz-Vo-a0T">
+                                <rect key="frame" x="0.0" y="238" width="414" height="216"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <color key="tintColor" name="FontColor"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="To view events in your area:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aeg-fU-abN">
+                                <rect key="frame" x="16" y="140" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="17"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l3b-5W-h1k">
+                                <rect key="frame" x="130" y="462" width="154" height="45.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="154" id="gpG-Yc-2N9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="gray" title="Continue">
+                                    <fontDescription key="titleFontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="26"/>
+                                    <color key="baseForegroundColor" name="FontColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="continueButtonClicked:" destination="S3D-Gu-pYv" eventType="touchUpInside" id="ooA-Ry-dSU"/>
+                                    <segue destination="dqz-aK-VyI" kind="show" identifier="ShowConcerts" animates="NO" id="eqD-0C-FK2"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="KZl-fW-XzA"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KZl-fW-XzA" firstAttribute="trailing" secondItem="l3b-5W-h1k" secondAttribute="trailing" constant="130" id="7as-4z-yxb"/>
+                            <constraint firstItem="Aeg-fU-abN" firstAttribute="top" secondItem="KZl-fW-XzA" secondAttribute="top" constant="52" id="8cM-CX-qY7"/>
+                            <constraint firstItem="0Dz-Vo-a0T" firstAttribute="trailing" secondItem="KZl-fW-XzA" secondAttribute="trailing" id="FtE-0r-rdr"/>
+                            <constraint firstItem="Ogs-7Z-xrf" firstAttribute="leading" secondItem="KZl-fW-XzA" secondAttribute="leading" constant="16" id="NWP-Qv-7wo"/>
+                            <constraint firstItem="l3b-5W-h1k" firstAttribute="leading" secondItem="KZl-fW-XzA" secondAttribute="leading" constant="130" id="OAG-TB-HbI"/>
+                            <constraint firstItem="Ogs-7Z-xrf" firstAttribute="top" secondItem="Aeg-fU-abN" secondAttribute="bottom" constant="12" id="Rdh-vn-C8w"/>
+                            <constraint firstItem="Aeg-fU-abN" firstAttribute="leading" secondItem="KZl-fW-XzA" secondAttribute="leading" constant="16" id="gmJ-36-itl"/>
+                            <constraint firstItem="l3b-5W-h1k" firstAttribute="top" secondItem="0Dz-Vo-a0T" secondAttribute="bottom" constant="8" symbolic="YES" id="iEy-Ik-6M9"/>
+                            <constraint firstItem="KZl-fW-XzA" firstAttribute="trailing" secondItem="Ogs-7Z-xrf" secondAttribute="trailing" constant="16" id="kUL-Kb-0TG"/>
+                            <constraint firstItem="0Dz-Vo-a0T" firstAttribute="leading" secondItem="KZl-fW-XzA" secondAttribute="leading" id="lcw-f6-JQn"/>
+                            <constraint firstItem="KZl-fW-XzA" firstAttribute="trailing" secondItem="Aeg-fU-abN" secondAttribute="trailing" constant="16" id="tkW-Td-zSm"/>
+                            <constraint firstItem="0Dz-Vo-a0T" firstAttribute="top" secondItem="Ogs-7Z-xrf" secondAttribute="bottom" constant="23" id="uRV-BV-cdE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="lGI-gh-2Hk">
+                        <barButtonItem key="leftBarButtonItem" title="Sign Out" id="NO0-Fd-muT">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="iaU-gW-75Y" kind="unwind" identifier="SignOutUnwind" unwindAction="unwindSignOutPressedWithSegue:" id="eeN-ZS-24C"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="statePicker" destination="0Dz-Vo-a0T" id="Zis-rl-74g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ibE-Q9-eBA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="iaU-gW-75Y" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2628.985507246377" y="66.964285714285708"/>
+        </scene>
+        <!--Concert View Controller-->
+        <scene sceneID="Tm4-S0-rwg">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="dqz-aK-VyI" customClass="ConcertViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CD4-ox-DKH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hg7-Pn-Klw">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <color key="sectionIndexColor" name="FontColor"/>
+                                <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="75" id="3zL-r3-Ufc" customClass="EventTableViewCell" customModule="Concierto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="3zL-r3-Ufc" id="Swd-vQ-4g6">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4g-8t-NEh">
+                                                    <rect key="frame" x="20" y="6" width="114" height="31"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="25"/>
+                                                    <color key="textColor" name="FontColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ca-Eb-K3N">
+                                                    <rect key="frame" x="20" y="34" width="49" height="21"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                                    <color key="textColor" name="PrimaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Venue Name " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ul2-eL-kBA">
+                                                    <rect key="frame" x="71" y="34" width="146" height="21"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                                    <color key="textColor" name="PrimaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hTI-vP-wAX">
+                                                    <rect key="frame" x="20" y="54" width="38" height="21"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                                    <color key="textColor" name="PrimaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qi7-CW-kv7">
+                                                    <rect key="frame" x="59" y="54" width="195" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="195" id="V78-dW-r4K"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                                    <color key="textColor" name="PrimaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Qi7-CW-kv7" firstAttribute="leading" secondItem="hTI-vP-wAX" secondAttribute="trailing" constant="1" id="1zL-l7-tbS"/>
+                                                <constraint firstItem="ul2-eL-kBA" firstAttribute="leading" secondItem="9ca-Eb-K3N" secondAttribute="trailing" constant="2" id="6rh-tN-53s"/>
+                                                <constraint firstItem="hTI-vP-wAX" firstAttribute="top" secondItem="t4g-8t-NEh" secondAttribute="bottom" constant="17" id="Acs-GI-RzU"/>
+                                                <constraint firstItem="Qi7-CW-kv7" firstAttribute="leading" secondItem="hTI-vP-wAX" secondAttribute="trailing" constant="1" id="PMh-KC-6rr"/>
+                                                <constraint firstItem="t4g-8t-NEh" firstAttribute="top" secondItem="Swd-vQ-4g6" secondAttribute="top" constant="6" id="Ve7-cv-Ur1"/>
+                                                <constraint firstItem="Qi7-CW-kv7" firstAttribute="top" secondItem="t4g-8t-NEh" secondAttribute="bottom" constant="17" id="Xyi-Df-dKy"/>
+                                                <constraint firstItem="9ca-Eb-K3N" firstAttribute="leading" secondItem="Swd-vQ-4g6" secondAttribute="leading" constant="20" symbolic="YES" id="aTo-SH-Bev"/>
+                                                <constraint firstItem="t4g-8t-NEh" firstAttribute="leading" secondItem="Swd-vQ-4g6" secondAttribute="leading" constant="20" symbolic="YES" id="huq-Mg-63d"/>
+                                                <constraint firstItem="hTI-vP-wAX" firstAttribute="leading" secondItem="Swd-vQ-4g6" secondAttribute="leading" constant="20" symbolic="YES" id="jsX-6g-JTX"/>
+                                                <constraint firstItem="9ca-Eb-K3N" firstAttribute="top" secondItem="Swd-vQ-4g6" secondAttribute="top" constant="34" id="pVG-lW-6My"/>
+                                                <constraint firstItem="ul2-eL-kBA" firstAttribute="top" secondItem="Swd-vQ-4g6" secondAttribute="top" constant="34" id="q6x-Yy-fTc"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" name="BackgroundColor"/>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="Qi7-CW-kv7" id="HeX-e7-f8d"/>
+                                            <outlet property="eventLabel" destination="t4g-8t-NEh" id="rol-ad-mI1"/>
+                                            <outlet property="venueLabel" destination="ul2-eL-kBA" id="pT6-dz-cDt"/>
+                                            <segue destination="Auc-zv-hGD" kind="show" identifier="ShowConcertDetail" animates="NO" id="LbT-OG-HkX"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FrK-PP-iBy"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="hg7-Pn-Klw" firstAttribute="top" secondItem="FrK-PP-iBy" secondAttribute="top" id="3eO-sb-Jp6"/>
+                            <constraint firstItem="FrK-PP-iBy" firstAttribute="bottom" secondItem="hg7-Pn-Klw" secondAttribute="bottom" id="OOv-RM-zLl"/>
+                            <constraint firstItem="FrK-PP-iBy" firstAttribute="trailing" secondItem="hg7-Pn-Klw" secondAttribute="trailing" id="Qwr-jK-au0"/>
+                            <constraint firstItem="hg7-Pn-Klw" firstAttribute="leading" secondItem="FrK-PP-iBy" secondAttribute="leading" id="eTV-sN-XFY"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="VGz-jt-eI4">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Back" id="CfR-0Y-Aox">
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <connections>
+                                    <segue destination="e4H-0h-Tdz" kind="unwind" unwindAction="unwindFromSegueWithUnwindSegue:" id="wRL-Gn-Wrv"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="person.3" catalog="system" id="8zl-Xu-1f1">
+                                <color key="tintColor" name="BackgroundColor"/>
+                                <connections>
+                                    <action selector="usersButtonPressed:" destination="dqz-aK-VyI" id="4B0-Vf-fEC"/>
+                                    <segue destination="jVE-5Z-c2L" kind="show" identifier="ShowUsers" id="r0b-la-Kmz"/>
+                                </connections>
+                            </barButtonItem>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Venues" id="Q9l-j4-cmm">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="bwW-7v-ovL" kind="show" identifier="ShowVenues" animates="NO" id="OA6-5R-n9S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="hg7-Pn-Klw" id="4PN-ET-bHH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s5d-RK-Aj1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="e4H-0h-Tdz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3513.04347826087" y="66.964285714285708"/>
+        </scene>
+        <!--Venue View Controller-->
+        <scene sceneID="p4j-Ik-TUL">
+            <objects>
+                <viewController id="bwW-7v-ovL" customClass="VenueViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aob-zL-pFV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="da9-qz-XoH">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="75" id="O2A-bf-uX4" customClass="VenueTableViewCell" customModule="Concierto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O2A-bf-uX4" id="yT5-nJ-k4g">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qY7-4D-bJS">
+                                                    <rect key="frame" x="20" y="11" width="358" height="31"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="25"/>
+                                                    <color key="textColor" name="FontColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City: City Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5jR-qS-StE">
+                                                    <rect key="frame" x="20" y="47" width="358" height="21"/>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="17"/>
+                                                    <color key="textColor" name="PrimaryColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="BackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5jR-qS-StE" secondAttribute="trailing" constant="16" id="8o6-7h-EX3"/>
+                                                <constraint firstItem="qY7-4D-bJS" firstAttribute="leading" secondItem="yT5-nJ-k4g" secondAttribute="leadingMargin" id="BvF-e2-694"/>
+                                                <constraint firstItem="5jR-qS-StE" firstAttribute="leading" secondItem="yT5-nJ-k4g" secondAttribute="leadingMargin" id="EIp-35-rpF"/>
+                                                <constraint firstItem="qY7-4D-bJS" firstAttribute="top" secondItem="yT5-nJ-k4g" secondAttribute="topMargin" id="KyE-Za-86K"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qY7-4D-bJS" secondAttribute="trailing" constant="16" id="fJ8-wL-EI7"/>
+                                                <constraint firstItem="5jR-qS-StE" firstAttribute="top" secondItem="qY7-4D-bJS" secondAttribute="bottom" constant="5" id="hpB-RK-Zjx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="cityLabel" destination="5jR-qS-StE" id="bY6-XD-8qs"/>
+                                            <outlet property="venueLabel" destination="qY7-4D-bJS" id="lda-AH-Maa"/>
+                                            <segue destination="nEZ-8x-MtJ" kind="show" identifier="ShowVenueDetail" animates="NO" id="AsJ-fV-LqK"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Amz-jx-1la"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Amz-jx-1la" firstAttribute="trailing" secondItem="da9-qz-XoH" secondAttribute="trailing" id="IkZ-A8-mzC"/>
+                            <constraint firstItem="da9-qz-XoH" firstAttribute="top" secondItem="Amz-jx-1la" secondAttribute="top" id="MSg-UO-PIu"/>
+                            <constraint firstItem="da9-qz-XoH" firstAttribute="leading" secondItem="Amz-jx-1la" secondAttribute="leading" id="uP7-ax-inH"/>
+                            <constraint firstItem="Amz-jx-1la" firstAttribute="bottom" secondItem="da9-qz-XoH" secondAttribute="bottom" id="vBM-Ql-tgx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="2am-0l-4gh">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="TAE-Io-vyL">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="Ri5-Ax-4P4" kind="unwind" unwindAction="unwindFromSeguetoConcertListWithUnwindSegue:" id="Cb4-Vx-hQI"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="da9-qz-XoH" id="wAu-oU-hLf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xj5-2r-s1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="Ri5-Ax-4P4" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4444.927536231884" y="-730.58035714285711"/>
+        </scene>
+        <!--Venue Detail View Controller-->
+        <scene sceneID="DW6-6m-JzM">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="nEZ-8x-MtJ" customClass="VenueDetailViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kIW-uK-w5h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Venue Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qOa-ux-Pg5">
+                                <rect key="frame" x="16" y="160" width="382" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="38"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Address: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9aM-be-i5u">
+                                <rect key="frame" x="16" y="214" width="382" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="28"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vkr-xP-Lz9">
+                                <rect key="frame" x="195" y="298" width="199" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="View Website">
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="29"/>
+                                    <color key="baseForegroundColor" name="FontColor"/>
+                                    <color key="baseBackgroundColor" name="PrimaryColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="Vyu-TI-uer" kind="show" identifier="SeeWebsite" id="sub-Vc-uri"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="E94-wJ-SbT">
+                                <rect key="frame" x="16" y="256" width="382" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="28"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="QOG-qe-t29">
+                                <rect key="frame" x="34" y="364" width="346" height="424"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9cJ-xn-6VK"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="i8m-Jb-dyQ">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="wB8-c5-Ubw">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="13L-as-cUY" kind="unwind" unwindAction="unwindFromSeguetoVenueWithUnwindSegue:" id="Q6P-dJ-Qc5"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="addressLabel" destination="9aM-be-i5u" id="04G-32-twF"/>
+                        <outlet property="cityLabel" destination="E94-wJ-SbT" id="3VM-fK-1yE"/>
+                        <outlet property="venueLabel" destination="qOa-ux-Pg5" id="SJ6-MT-J58"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tyJ-rM-5LZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="13L-as-cUY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5289.8550724637689" y="-731.25"/>
+        </scene>
+        <!--Venue Webpage View Controller-->
+        <scene sceneID="84L-b5-64L">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Vyu-TI-uer" customClass="VenueWebpageViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5YQ-uR-qEk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Zvd-gB-sKM"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wLj-ez-UWn">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="6A9-yB-VVa">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="ThK-2s-IBu" kind="unwind" unwindAction="unwindFromSeguetoVenueDetailWithUnwindSegue:" id="PCg-cj-N1U"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="c2d-2d-pXC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ThK-2s-IBu" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="6180" y="-731"/>
+        </scene>
+        <!--Concierto User View Controller-->
+        <scene sceneID="JHH-KP-M8E">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="jVE-5Z-c2L" customClass="ConciertoUserViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hnp-oc-83j">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="a9x-YQ-c0u">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" name="BackgroundColor"/>
+                                <color key="sectionIndexBackgroundColor" name="BackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="UserCell" rowHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="fWf-f0-qfh" customClass="ConciertoUserTableViewCell" customModule="Concierto" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fWf-f0-qfh" id="oug-3a-Ing">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.crop.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="laL-YG-9JV">
+                                                    <rect key="frame" x="8" y="5.5" width="70" height="69"/>
+                                                    <color key="tintColor" name="FontColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="E8e-AA-jFD"/>
+                                                        <constraint firstAttribute="height" constant="70" id="txj-qg-x04"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Display Name Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yi4-HS-FRE">
+                                                    <rect key="frame" x="86" y="16" width="316" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="vb3-N0-Q75"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="20"/>
+                                                    <color key="textColor" name="FontColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PrJ-Wl-xim">
+                                                    <rect key="frame" x="86" y="37" width="316" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="7Ie-rD-QFd"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ovI-bR-TaE"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
+                                                    <color key="textColor" name="FontColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Since: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cmM-K7-4Wz">
+                                                    <rect key="frame" x="86" y="57" width="70" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="GEg-VK-ptH"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="OUm-HP-6sN"/>
+                                                        <constraint firstAttribute="width" constant="70" id="WGW-Z0-EkS"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
+                                                    <color key="textColor" name="FontColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQs-Y3-ucb">
+                                                    <rect key="frame" x="159" y="57" width="89" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="89" id="69g-nh-Sj8"/>
+                                                        <constraint firstAttribute="height" constant="21" id="GOm-Z8-rW0"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="aHi-fq-2cq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="16"/>
+                                                    <color key="textColor" name="FontColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" name="BackgroundColor"/>
+                                            <constraints>
+                                                <constraint firstItem="yi4-HS-FRE" firstAttribute="leading" secondItem="laL-YG-9JV" secondAttribute="trailing" constant="8" id="06z-lJ-jJD"/>
+                                                <constraint firstItem="wQs-Y3-ucb" firstAttribute="top" secondItem="yi4-HS-FRE" secondAttribute="bottom" constant="20" id="2Aq-ws-Xbc"/>
+                                                <constraint firstItem="yi4-HS-FRE" firstAttribute="trailing" secondItem="oug-3a-Ing" secondAttribute="trailingMargin" constant="8" id="AeU-Gr-3Lx"/>
+                                                <constraint firstItem="PrJ-Wl-xim" firstAttribute="top" secondItem="yi4-HS-FRE" secondAttribute="bottom" id="MY3-2x-dRd"/>
+                                                <constraint firstItem="PrJ-Wl-xim" firstAttribute="trailing" secondItem="oug-3a-Ing" secondAttribute="trailingMargin" constant="8" id="PnK-5I-kk1"/>
+                                                <constraint firstItem="cmM-K7-4Wz" firstAttribute="leading" secondItem="laL-YG-9JV" secondAttribute="trailing" constant="8" id="Rf9-EX-MVn"/>
+                                                <constraint firstItem="PrJ-Wl-xim" firstAttribute="leading" secondItem="laL-YG-9JV" secondAttribute="trailing" constant="8" id="S2a-97-47L"/>
+                                                <constraint firstAttribute="bottom" secondItem="laL-YG-9JV" secondAttribute="bottom" constant="5" id="Xx4-hy-aSd"/>
+                                                <constraint firstItem="laL-YG-9JV" firstAttribute="top" secondItem="oug-3a-Ing" secondAttribute="top" constant="5" id="Yxl-l8-0n4"/>
+                                                <constraint firstItem="yi4-HS-FRE" firstAttribute="top" secondItem="oug-3a-Ing" secondAttribute="topMargin" constant="5" id="aRq-m5-TbN"/>
+                                                <constraint firstItem="wQs-Y3-ucb" firstAttribute="leading" secondItem="cmM-K7-4Wz" secondAttribute="trailing" constant="3" id="b5K-sU-n8l"/>
+                                                <constraint firstItem="laL-YG-9JV" firstAttribute="leading" secondItem="oug-3a-Ing" secondAttribute="leading" constant="8" id="dhR-ZC-ylo"/>
+                                                <constraint firstItem="cmM-K7-4Wz" firstAttribute="top" secondItem="yi4-HS-FRE" secondAttribute="bottom" constant="20" id="z5u-V6-Zt3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="displayLabel" destination="yi4-HS-FRE" id="BZc-zo-daX"/>
+                                            <outlet property="emailLabel" destination="PrJ-Wl-xim" id="PSd-qN-WrL"/>
+                                            <outlet property="userImageView" destination="laL-YG-9JV" id="8ge-e5-3Rt"/>
+                                            <outlet property="userSinceLabel" destination="wQs-Y3-ucb" id="L3G-dI-Rfz"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="dzh-sd-gnm"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a9x-YQ-c0u" firstAttribute="leading" secondItem="dzh-sd-gnm" secondAttribute="leading" id="6ai-Ou-hAD"/>
+                            <constraint firstItem="dzh-sd-gnm" firstAttribute="trailing" secondItem="a9x-YQ-c0u" secondAttribute="trailing" id="Oe8-qX-weh"/>
+                            <constraint firstItem="a9x-YQ-c0u" firstAttribute="top" secondItem="dzh-sd-gnm" secondAttribute="top" id="mbI-wj-5Dz"/>
+                            <constraint firstItem="dzh-sd-gnm" firstAttribute="bottom" secondItem="a9x-YQ-c0u" secondAttribute="bottom" id="v2x-em-K9q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="g1O-fy-BLn">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="yNr-q6-r9h">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="ewG-yn-MZa" kind="unwind" unwindAction="unwindFromSeguetoConcertListWithUnwindSegue:" id="xLH-75-Ht1"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="a9x-YQ-c0u" id="vWq-96-lrW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kgd-qc-Cru" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="ewG-yn-MZa" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4445" y="-85"/>
+        </scene>
+        <!--Concert Detail View Controller-->
+        <scene sceneID="Fxl-us-PnV">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="Auc-zv-hGD" customClass="ConcertDetailViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MDE-Pa-KAt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1Uv-7O-oh2">
+                                <rect key="frame" x="16" y="82" width="382" height="46"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoSCITCTT-Book" family="Bodoni 72 Smallcaps" pointSize="38"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Venue: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MqY-ky-sfw">
+                                <rect key="frame" x="16" y="150" width="382" height="29"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="24"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBJ-DH-btG">
+                                <rect key="frame" x="16" y="195" width="382" height="29"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="24"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpU-43-i8G">
+                                <rect key="frame" x="16" y="240" width="382" height="29"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="24"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9JB-7m-SwG">
+                                <rect key="frame" x="16" y="336" width="382" height="215"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqq-im-cle">
+                                <rect key="frame" x="100" y="582" width="214" height="54"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="tinted" title="Buy Tickets">
+                                    <fontDescription key="titleFontDescription" name="Didot" family="Didot" pointSize="32"/>
+                                    <color key="baseForegroundColor" name="FontColor"/>
+                                    <color key="baseBackgroundColor" name="PrimaryColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="xhz-0G-Kik" kind="show" identifier="BuyTickets" id="5gq-Gx-2p5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ixw-cw-Ul6">
+                                <rect key="frame" x="16" y="285" width="382" height="29"/>
+                                <fontDescription key="fontDescription" name="BodoniSvtyTwoITCTT-Book" family="Bodoni 72" pointSize="24"/>
+                                <color key="textColor" name="FontColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="D7N-fX-CC3"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MqY-ky-sfw" firstAttribute="leading" secondItem="D7N-fX-CC3" secondAttribute="leading" constant="16" id="12I-om-w9m"/>
+                            <constraint firstItem="Jqq-im-cle" firstAttribute="top" secondItem="9JB-7m-SwG" secondAttribute="bottom" constant="16" id="3el-Ud-ihx"/>
+                            <constraint firstItem="TBJ-DH-btG" firstAttribute="top" secondItem="MqY-ky-sfw" secondAttribute="bottom" constant="16" id="5UV-dC-3vj"/>
+                            <constraint firstItem="mpU-43-i8G" firstAttribute="top" secondItem="TBJ-DH-btG" secondAttribute="bottom" constant="16" id="8YM-xO-1bT"/>
+                            <constraint firstItem="1Uv-7O-oh2" firstAttribute="top" secondItem="MDE-Pa-KAt" secondAttribute="top" constant="82" id="Cdq-uj-kHd"/>
+                            <constraint firstItem="D7N-fX-CC3" firstAttribute="trailing" secondItem="1Uv-7O-oh2" secondAttribute="trailing" constant="16" id="F8a-q8-XiF"/>
+                            <constraint firstItem="9JB-7m-SwG" firstAttribute="top" secondItem="ixw-cw-Ul6" secondAttribute="bottom" constant="10" id="FLH-Y6-xdr"/>
+                            <constraint firstItem="mpU-43-i8G" firstAttribute="leading" secondItem="D7N-fX-CC3" secondAttribute="leading" constant="16" id="RiR-ZF-jS6"/>
+                            <constraint firstItem="Jqq-im-cle" firstAttribute="leading" secondItem="D7N-fX-CC3" secondAttribute="leading" constant="100" id="SSj-h3-1ef"/>
+                            <constraint firstItem="D7N-fX-CC3" firstAttribute="trailing" secondItem="MqY-ky-sfw" secondAttribute="trailing" constant="16" id="Wu3-Xt-hMm"/>
+                            <constraint firstItem="D7N-fX-CC3" firstAttribute="trailing" secondItem="mpU-43-i8G" secondAttribute="trailing" constant="16" id="d1f-4v-pye"/>
+                            <constraint firstItem="D7N-fX-CC3" firstAttribute="trailing" secondItem="ixw-cw-Ul6" secondAttribute="trailing" constant="16" id="ekg-C5-bjF"/>
+                            <constraint firstItem="MqY-ky-sfw" firstAttribute="top" secondItem="1Uv-7O-oh2" secondAttribute="bottom" constant="22" id="jFm-iH-H2m"/>
+                            <constraint firstItem="TBJ-DH-btG" firstAttribute="leading" secondItem="D7N-fX-CC3" secondAttribute="leading" constant="16" id="o7L-yT-caR"/>
+                            <constraint firstItem="1Uv-7O-oh2" firstAttribute="leading" secondItem="D7N-fX-CC3" secondAttribute="leading" constant="16" id="oHt-Nq-sb0"/>
+                            <constraint firstItem="9JB-7m-SwG" firstAttribute="leading" secondItem="D7N-fX-CC3" secondAttribute="leading" constant="16" id="sFb-yZ-QF1"/>
+                            <constraint firstItem="ixw-cw-Ul6" firstAttribute="leading" secondItem="D7N-fX-CC3" secondAttribute="leading" constant="16" id="srV-SP-iZb"/>
+                            <constraint firstItem="D7N-fX-CC3" firstAttribute="trailing" secondItem="Jqq-im-cle" secondAttribute="trailing" constant="100" id="uDa-3E-3uC"/>
+                            <constraint firstItem="D7N-fX-CC3" firstAttribute="trailing" secondItem="9JB-7m-SwG" secondAttribute="trailing" constant="16" id="uWa-CW-Wfr"/>
+                            <constraint firstItem="ixw-cw-Ul6" firstAttribute="top" secondItem="mpU-43-i8G" secondAttribute="bottom" constant="16" id="vHM-R1-u03"/>
+                            <constraint firstItem="D7N-fX-CC3" firstAttribute="trailing" secondItem="TBJ-DH-btG" secondAttribute="trailing" constant="16" id="y3s-oR-GIU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="iRV-Ay-ffg">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="9tR-M4-Drl">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="a8u-ZS-EIL" kind="unwind" unwindAction="unwindFromSeguetoConcertListWithUnwindSegue:" id="cNF-4a-f6b"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cityLabel" destination="TBJ-DH-btG" id="zjn-Va-f4Q"/>
+                        <outlet property="dateLabel" destination="ixw-cw-Ul6" id="rhw-gb-JlP"/>
+                        <outlet property="eventLabel" destination="1Uv-7O-oh2" id="R4v-qY-hlq"/>
+                        <outlet property="imageView" destination="9JB-7m-SwG" id="eHb-Px-FnB"/>
+                        <outlet property="typeLabel" destination="mpU-43-i8G" id="JaS-uy-Vji"/>
+                        <outlet property="venueLabel" destination="MqY-ky-sfw" id="53p-p4-iys"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="osl-Mr-pc0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="a8u-ZS-EIL" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4446" y="621"/>
+        </scene>
+        <!--Webpage View Controller-->
+        <scene sceneID="V4x-hg-o0R">
+            <objects>
+                <viewController modalPresentationStyle="fullScreen" id="xhz-0G-Kik" customClass="WebpageViewController" customModule="Concierto" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="a8J-Uc-FRS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="0pl-de-Qde"/>
+                        <color key="backgroundColor" name="BackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="iOr-i6-yhV">
+                        <barButtonItem key="leftBarButtonItem" title="Back" id="HZC-Y4-dMc">
+                            <color key="tintColor" name="BackgroundColor"/>
+                            <connections>
+                                <segue destination="af9-QA-LbG" kind="unwind" unwindAction="unwindFromSeguetoConcertDetailWithUnwindSegue:" id="Ztk-NY-rCN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PKA-O3-l9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="af9-QA-LbG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5378" y="284"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RfT-3L-QFa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gTM-kb-aqC" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9v8-j8-rav">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aO6-y8-JcN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6qM-zr-csV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="66.964285714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kQD-iA-epe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="xTT-F7-Z0Q" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="44r-yx-L8T"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qMw-Vs-jg2">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="S3D-Gu-pYv" kind="relationship" relationship="rootViewController" id="HO2-Jt-5Yv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kO4-4x-U1k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1718.840579710145" y="66.964285714285708"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="logo" width="927" height="927"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <namedColor name="BackgroundColor">
+            <color red="0.93599998950958252" green="0.8410000205039978" blue="0.74800002574920654" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="FontColor">
+            <color red="0.45899999141693115" green="0.1809999942779541" blue="0.53700000047683716" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="PrimaryColor">
+            <color red="0.64200001955032349" green="0.16899999976158142" blue="0.59500002861022949" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

@@ -7,15 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5AE938A5ADA6DB477A978B6F /* Pods_Concierto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE4D27644A770E7561A1A9FE /* Pods_Concierto.framework */; };
+		B40EEF412817B65800A3A5FF /* EventTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B40EEF402817B65800A3A5FF /* EventTableViewCell.swift */; };
 		B433D50C2817419300E29BF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D50B2817419300E29BF0 /* AppDelegate.swift */; };
 		B433D50E2817419300E29BF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D50D2817419300E29BF0 /* SceneDelegate.swift */; };
-		B433D5102817419300E29BF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D50F2817419300E29BF0 /* ViewController.swift */; };
+		B433D5102817419300E29BF0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D50F2817419300E29BF0 /* LoginViewController.swift */; };
 		B433D5132817419300E29BF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B433D5112817419300E29BF0 /* Main.storyboard */; };
 		B433D5152817419600E29BF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B433D5142817419600E29BF0 /* Assets.xcassets */; };
 		B433D5182817419600E29BF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B433D5162817419600E29BF0 /* LaunchScreen.storyboard */; };
 		B433D5232817419600E29BF0 /* ConciertoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D5222817419600E29BF0 /* ConciertoTests.swift */; };
 		B433D52D2817419600E29BF0 /* ConciertoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D52C2817419600E29BF0 /* ConciertoUITests.swift */; };
 		B433D52F2817419600E29BF0 /* ConciertoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D52E2817419600E29BF0 /* ConciertoUITestsLaunchTests.swift */; };
+		B433D53C281741DE00E29BF0 /* APIkeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D53B281741DE00E29BF0 /* APIkeys.swift */; };
+		B433D53E28174C3300E29BF0 /* StatesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D53D28174C3300E29BF0 /* StatesViewController.swift */; };
+		B433D542281755FB00E29BF0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B433D541281755FB00E29BF0 /* GoogleService-Info.plist */; };
+		B433D54428176A6E00E29BF0 /* ConcertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D54328176A6D00E29BF0 /* ConcertViewController.swift */; };
+		B433D54628176CAE00E29BF0 /* Concert.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D54528176CAE00E29BF0 /* Concert.swift */; };
+		B433D54828176D8400E29BF0 /* Concerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = B433D54728176D8400E29BF0 /* Concerts.swift */; };
+		B4D8D16B2818B104009CE4CF /* ConcertDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D16A2818B104009CE4CF /* ConcertDetailViewController.swift */; };
+		B4D8D16D2818C275009CE4CF /* WebpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D16C2818C275009CE4CF /* WebpageViewController.swift */; };
+		B4D8D1772818DCC0009CE4CF /* ConciertoUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D1762818DCBF009CE4CF /* ConciertoUser.swift */; };
+		B4D8D1792818DD7C009CE4CF /* ConciertoUsers.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D1782818DD7C009CE4CF /* ConciertoUsers.swift */; };
+		B4D8D17B2818E745009CE4CF /* ConciertoUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D17A2818E745009CE4CF /* ConciertoUserViewController.swift */; };
+		B4D8D17D2818E781009CE4CF /* ConciertoUserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D17C2818E780009CE4CF /* ConciertoUserTableViewCell.swift */; };
+		B4D8D17F281903A2009CE4CF /* VenueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D17E281903A2009CE4CF /* VenueViewController.swift */; };
+		B4D8D181281903FE009CE4CF /* Venue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D180281903FE009CE4CF /* Venue.swift */; };
+		B4D8D18328190416009CE4CF /* Venues.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D18228190416009CE4CF /* Venues.swift */; };
+		B4D8D1852819071F009CE4CF /* VenueTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D1842819071F009CE4CF /* VenueTableViewCell.swift */; };
+		B4D8D18728190C82009CE4CF /* VenueDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D18628190C82009CE4CF /* VenueDetailViewController.swift */; };
+		B4D8D18928191183009CE4CF /* VenueWebpageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D8D18828191183009CE4CF /* VenueWebpageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,10 +56,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		034D50284BC3EFE0D09BBBA5 /* Pods-Concierto.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Concierto.release.xcconfig"; path = "Target Support Files/Pods-Concierto/Pods-Concierto.release.xcconfig"; sourceTree = "<group>"; };
+		27618CC177C6641F1042AC19 /* Pods-Concierto.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Concierto.debug.xcconfig"; path = "Target Support Files/Pods-Concierto/Pods-Concierto.debug.xcconfig"; sourceTree = "<group>"; };
+		B40EEF402817B65800A3A5FF /* EventTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventTableViewCell.swift; sourceTree = "<group>"; };
 		B433D5082817419300E29BF0 /* Concierto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concierto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B433D50B2817419300E29BF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B433D50D2817419300E29BF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B433D50F2817419300E29BF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B433D50F2817419300E29BF0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B433D5122817419300E29BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B433D5142817419600E29BF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B433D5172817419600E29BF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +72,25 @@
 		B433D5282817419600E29BF0 /* ConciertoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ConciertoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B433D52C2817419600E29BF0 /* ConciertoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciertoUITests.swift; sourceTree = "<group>"; };
 		B433D52E2817419600E29BF0 /* ConciertoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciertoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B433D53B281741DE00E29BF0 /* APIkeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIkeys.swift; sourceTree = "<group>"; };
+		B433D53D28174C3300E29BF0 /* StatesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesViewController.swift; sourceTree = "<group>"; };
+		B433D541281755FB00E29BF0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B433D54328176A6D00E29BF0 /* ConcertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertViewController.swift; sourceTree = "<group>"; };
+		B433D54528176CAE00E29BF0 /* Concert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concert.swift; sourceTree = "<group>"; };
+		B433D54728176D8400E29BF0 /* Concerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concerts.swift; sourceTree = "<group>"; };
+		B4D8D16A2818B104009CE4CF /* ConcertDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcertDetailViewController.swift; sourceTree = "<group>"; };
+		B4D8D16C2818C275009CE4CF /* WebpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebpageViewController.swift; sourceTree = "<group>"; };
+		B4D8D1762818DCBF009CE4CF /* ConciertoUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciertoUser.swift; sourceTree = "<group>"; };
+		B4D8D1782818DD7C009CE4CF /* ConciertoUsers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciertoUsers.swift; sourceTree = "<group>"; };
+		B4D8D17A2818E745009CE4CF /* ConciertoUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciertoUserViewController.swift; sourceTree = "<group>"; };
+		B4D8D17C2818E780009CE4CF /* ConciertoUserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConciertoUserTableViewCell.swift; sourceTree = "<group>"; };
+		B4D8D17E281903A2009CE4CF /* VenueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueViewController.swift; sourceTree = "<group>"; };
+		B4D8D180281903FE009CE4CF /* Venue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venue.swift; sourceTree = "<group>"; };
+		B4D8D18228190416009CE4CF /* Venues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Venues.swift; sourceTree = "<group>"; };
+		B4D8D1842819071F009CE4CF /* VenueTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueTableViewCell.swift; sourceTree = "<group>"; };
+		B4D8D18628190C82009CE4CF /* VenueDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueDetailViewController.swift; sourceTree = "<group>"; };
+		B4D8D18828191183009CE4CF /* VenueWebpageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VenueWebpageViewController.swift; sourceTree = "<group>"; };
+		CE4D27644A770E7561A1A9FE /* Pods_Concierto.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Concierto.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AE938A5ADA6DB477A978B6F /* Pods_Concierto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +119,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8006A3241A60B45EF57AD2A9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				27618CC177C6641F1042AC19 /* Pods-Concierto.debug.xcconfig */,
+				034D50284BC3EFE0D09BBBA5 /* Pods-Concierto.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		B433D4FF2817419300E29BF0 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +135,8 @@
 				B433D5212817419600E29BF0 /* ConciertoTests */,
 				B433D52B2817419600E29BF0 /* ConciertoUITests */,
 				B433D5092817419300E29BF0 /* Products */,
+				8006A3241A60B45EF57AD2A9 /* Pods */,
+				D4FDB14A25EA60966726C47B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -101,11 +155,30 @@
 			children = (
 				B433D50B2817419300E29BF0 /* AppDelegate.swift */,
 				B433D50D2817419300E29BF0 /* SceneDelegate.swift */,
-				B433D50F2817419300E29BF0 /* ViewController.swift */,
+				B433D54528176CAE00E29BF0 /* Concert.swift */,
+				B433D54728176D8400E29BF0 /* Concerts.swift */,
+				B4D8D180281903FE009CE4CF /* Venue.swift */,
+				B4D8D18228190416009CE4CF /* Venues.swift */,
+				B4D8D1762818DCBF009CE4CF /* ConciertoUser.swift */,
+				B4D8D1782818DD7C009CE4CF /* ConciertoUsers.swift */,
+				B40EEF402817B65800A3A5FF /* EventTableViewCell.swift */,
+				B4D8D17C2818E780009CE4CF /* ConciertoUserTableViewCell.swift */,
+				B4D8D1842819071F009CE4CF /* VenueTableViewCell.swift */,
+				B433D50F2817419300E29BF0 /* LoginViewController.swift */,
+				B433D53D28174C3300E29BF0 /* StatesViewController.swift */,
+				B433D54328176A6D00E29BF0 /* ConcertViewController.swift */,
+				B4D8D16A2818B104009CE4CF /* ConcertDetailViewController.swift */,
+				B4D8D16C2818C275009CE4CF /* WebpageViewController.swift */,
+				B4D8D17A2818E745009CE4CF /* ConciertoUserViewController.swift */,
+				B4D8D17E281903A2009CE4CF /* VenueViewController.swift */,
+				B4D8D18628190C82009CE4CF /* VenueDetailViewController.swift */,
+				B4D8D18828191183009CE4CF /* VenueWebpageViewController.swift */,
 				B433D5112817419300E29BF0 /* Main.storyboard */,
 				B433D5142817419600E29BF0 /* Assets.xcassets */,
 				B433D5162817419600E29BF0 /* LaunchScreen.storyboard */,
 				B433D5192817419600E29BF0 /* Info.plist */,
+				B433D541281755FB00E29BF0 /* GoogleService-Info.plist */,
+				B433D53B281741DE00E29BF0 /* APIkeys.swift */,
 			);
 			path = Concierto;
 			sourceTree = "<group>";
@@ -127,6 +200,14 @@
 			path = ConciertoUITests;
 			sourceTree = "<group>";
 		};
+		D4FDB14A25EA60966726C47B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE4D27644A770E7561A1A9FE /* Pods_Concierto.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,9 +215,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B433D5322817419600E29BF0 /* Build configuration list for PBXNativeTarget "Concierto" */;
 			buildPhases = (
+				803586E30DE18E41E051E3E7 /* [CP] Check Pods Manifest.lock */,
 				B433D5042817419300E29BF0 /* Sources */,
 				B433D5052817419300E29BF0 /* Frameworks */,
 				B433D5062817419300E29BF0 /* Resources */,
+				479A0A7FD47B73116EDE6DC8 /* [CP] Embed Pods Frameworks */,
+				600FE4E1F262DA70355B47CB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -232,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B433D5182817419600E29BF0 /* LaunchScreen.storyboard in Resources */,
+				B433D542281755FB00E29BF0 /* GoogleService-Info.plist in Resources */,
 				B433D5152817419600E29BF0 /* Assets.xcassets in Resources */,
 				B433D5132817419300E29BF0 /* Main.storyboard in Resources */,
 			);
@@ -253,14 +338,91 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		479A0A7FD47B73116EDE6DC8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Concierto/Pods-Concierto-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Concierto/Pods-Concierto-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Concierto/Pods-Concierto-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		600FE4E1F262DA70355B47CB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Concierto/Pods-Concierto-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Concierto/Pods-Concierto-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Concierto/Pods-Concierto-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		803586E30DE18E41E051E3E7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Concierto-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B433D5042817419300E29BF0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B433D5102817419300E29BF0 /* ViewController.swift in Sources */,
+				B4D8D16B2818B104009CE4CF /* ConcertDetailViewController.swift in Sources */,
+				B4D8D18328190416009CE4CF /* Venues.swift in Sources */,
+				B4D8D181281903FE009CE4CF /* Venue.swift in Sources */,
+				B4D8D16D2818C275009CE4CF /* WebpageViewController.swift in Sources */,
+				B40EEF412817B65800A3A5FF /* EventTableViewCell.swift in Sources */,
+				B433D53E28174C3300E29BF0 /* StatesViewController.swift in Sources */,
+				B4D8D1852819071F009CE4CF /* VenueTableViewCell.swift in Sources */,
+				B433D5102817419300E29BF0 /* LoginViewController.swift in Sources */,
+				B4D8D18928191183009CE4CF /* VenueWebpageViewController.swift in Sources */,
+				B433D54828176D8400E29BF0 /* Concerts.swift in Sources */,
+				B4D8D17F281903A2009CE4CF /* VenueViewController.swift in Sources */,
 				B433D50C2817419300E29BF0 /* AppDelegate.swift in Sources */,
+				B4D8D18728190C82009CE4CF /* VenueDetailViewController.swift in Sources */,
+				B433D53C281741DE00E29BF0 /* APIkeys.swift in Sources */,
+				B4D8D1792818DD7C009CE4CF /* ConciertoUsers.swift in Sources */,
 				B433D50E2817419300E29BF0 /* SceneDelegate.swift in Sources */,
+				B4D8D17B2818E745009CE4CF /* ConciertoUserViewController.swift in Sources */,
+				B433D54628176CAE00E29BF0 /* Concert.swift in Sources */,
+				B433D54428176A6E00E29BF0 /* ConcertViewController.swift in Sources */,
+				B4D8D1772818DCC0009CE4CF /* ConciertoUser.swift in Sources */,
+				B4D8D17D2818E781009CE4CF /* ConciertoUserTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +594,7 @@
 		};
 		B433D5332817419600E29BF0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 27618CC177C6641F1042AC19 /* Pods-Concierto.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -460,6 +623,7 @@
 		};
 		B433D5342817419600E29BF0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 034D50284BC3EFE0D09BBBA5 /* Pods-Concierto.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

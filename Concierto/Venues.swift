@@ -19,17 +19,18 @@ class Venues {
         var name: String
         var city: String
         var url: String
-        var address: String
+        var address: String?
 
     }
 
 
     
     var venueArray: [VenueData] = []
-    
+    var pageNumber = 1
+    var continueLoading = true
     
     func getVenueData(state: String,completed: @escaping () -> ()) {
-        let url = "https://api.seatgeek.com/2/venues?state=\(state)&client_id=\(APIkeys.seatGeekKey)"
+        let url = "https://api.seatgeek.com/2/venues?state=\(state)&client_id=\(APIkeys.seatGeekKey)&page=\(pageNumber)"
         print("STATE CHOSEN: \(state)")
         let urlString = url
         print(urlString)
@@ -44,9 +45,14 @@ class Venues {
             }
             do {
                 let returned = try JSONDecoder().decode(Returned.self, from: data!)
-
-                for data in returned.venues {
-                    self.venueArray.append(VenueData(name: data.name, location: data.city, url: data.url, address: data.address))
+                
+                if returned.venues.count > 0 {
+                    for data in returned.venues {
+                        self.venueArray.append(VenueData(name: data.name, location: data.city, url: data.url, address: data.address ?? ""))
+                    }
+                    self.pageNumber = self.pageNumber + 1
+                } else {
+                    self.continueLoading = false
                 }
             } catch {
                 print("JSON Error: \(error)")

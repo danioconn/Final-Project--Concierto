@@ -54,14 +54,14 @@ extension ConcertViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row+1 == concerts.concertArray.count && indexPath.row+1 < concerts.count  {
+        if indexPath.row == concerts.concertArray.count - 1 && concerts.continueLoading == true {
             concerts.getData(state: chosenState) {
                 DispatchQueue.main.async {
                     self.tableView.reloadData()
                 }
-
             }
         }
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! EventTableViewCell
         cell.concertData = concerts.concertArray[indexPath.row]
         return cell

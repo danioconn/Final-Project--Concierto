@@ -52,6 +52,15 @@ extension VenueViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if indexPath.row == venues.venueArray.count - 1 && venues.continueLoading == true {
+            venues.getVenueData(state: chosenState) {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
+
  
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! VenueTableViewCell
         cell.venueData = venues.venueArray[indexPath.row]

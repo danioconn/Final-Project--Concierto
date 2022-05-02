@@ -22,7 +22,7 @@ class VenueDetailViewController: UIViewController {
     func updateUserInterface() {
         venueLabel.text = venueData.name
         cityLabel.text = "City: \(venueData.location)"
-        addressLabel.text = "Type: \(venueData.address)"
+        addressLabel.text = "Address: \(venueData.address)"
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
